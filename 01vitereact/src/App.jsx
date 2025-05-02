@@ -3,10 +3,13 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import Chai from "./Test"
+
 function App() {
 
   return (
-    <h1>Divyansh Agarwal</h1>
+    // <h1>Divyansh Agarwal</h1>
+    <Chai />
   )
 }
 
