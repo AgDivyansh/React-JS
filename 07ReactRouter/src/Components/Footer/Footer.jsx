@@ -1,20 +1,5 @@
 import React from 'react'
-
 import { Link, NavLink } from 'react-router-dom';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default function Footer() {
   return (
     <footer className="bg-white border-y">
@@ -36,14 +21,21 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <NavLink to="/" 
+                  className= {({isActive}) => `
+                    hover:underline
+                    ${isActive ? "text-orange-700" : "text-gray-700"}
+                    `}
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:underline">
+                  <NavLink to="/about" className={({isActive}) => `
+                  ${isActive ? "text-orange-700" : "text-gray-700"}
+                    hover:underline`}>
                     About
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -54,7 +46,7 @@ export default function Footer() {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/hiteshchoudhary"
+                    href="https://github.com/AgDivyansh"
                     className="hover:underline"
                     target="_blank"
                     rel="noreferrer"
@@ -90,13 +82,13 @@ export default function Footer() {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center">
+          {/* <span className="text-sm text-gray-500 sm:text-center">
             © 2023
             <a href="https://hiteshchoudhary.com/" className="hover:underline">
               hiteshchoudhary
             </a>
             . All Rights Reserved.
-          </span>
+          </span> */}
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
             <Link to="#" className="text-gray-500 hover:text-gray-900">
               <svg
