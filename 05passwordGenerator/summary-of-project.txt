@@ -1,0 +1,9 @@
+hooks used
+1. useState
+2. useCallback
+3. useEffect
+4. useRef
+
+useCallback used to optimized and memoize the password gemerator function in the cash memory of the pc
+useEffect hooks is used to run a function when ever it is required 
+we have used this because passwordGenerator function is dependent on some variables like (length, charAllowed, numberAllowed)06
